@@ -1,9 +1,8 @@
 language: python
 python:
   - "3.7"
-cache: pip
-install:
-  - pip install -r unittest
-  - pip install -r rpn
+#cache: pip
+#install:
+#  - pip install -r requirements.txt
 script:
-  - python test_rpn.py
+  - python3 -m unittest
