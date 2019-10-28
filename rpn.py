@@ -7,14 +7,21 @@ def calculate(arg):
     for token in arg.split():
         print(token)
         if token == '+':
-            arg1 = stack.pop()
             arg2 = stack.pop()
+            arg1 = stack.pop()
             result = arg1 + arg2
+            stack.append(result)
+        elif token == '-':
+            arg2 = stack.pop()
+            arg1 = stack.pop()
+            result = arg1 - arg2
             stack.append(result)
         else:
             stack.append(int(token))
 
-        print(stack)
+        #print(stack)
+        if len(stack) != 1:
+            raise TypeError('malformed input')
 
 
 def main():
