@@ -11,10 +11,10 @@ class TestBasics(unittest.TestCase):
     def test_sub(self):
         result = rpn.calculate('5 3 -')
         self.assertEqual(2, result)
-    def test_badinput(self)
+    def test_badinput(self):
         with self.assertRaises(TypeError):
             rpn.calculate('1 2 3 +')
     # ADDED HW8
-    def test_exp(self)
+    def test_exp(self):
         result = rpn.calculate('5 3 ^')
         self.assertEqual(125, result)
